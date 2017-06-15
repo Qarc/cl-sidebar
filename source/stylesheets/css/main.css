@@ -221,6 +221,7 @@ footer {
   -o-transition: 0.3s;
   -moz-transition: 0.3s;
   transition: 0.3s;
+  min-height: 950px;
 }
 
 .sidebar__logo {
