@@ -21,6 +21,7 @@
 		$('.search__button--min').on('click', function() {
 			$('.sidebar').removeClass('sidebar--close');
 			$('.search__button').removeClass('search__button--min');
+			$('.sidebar__search input').focus();
 		});
 
 	});
