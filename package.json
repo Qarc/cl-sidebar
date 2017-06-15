@@ -1,0 +1,29 @@
+{
+  "name": "compatibl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Qarc/cl-sidebar.git"
+  },
+  "author": "Nick Hnatovskyi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Qarc/cl-sidebar/issues"
+  },
+  "homepage": "https://github.com/Qarc/cl-sidebar#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}

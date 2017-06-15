@@ -1,0 +1,197 @@
+.sidebar
+	position: absolute
+	top: 0
+	left: 0
+	padding-top: 17px
+	min-width: 320px
+	max-width: 327px
+	width: 100%
+	box-sizing: border-box
+	padding-bottom: 78px
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.54)
+	overflow: hidden
+	&__logo
+		display: block
+		margin-bottom: 20px
+		margin-left: 25px
+		img
+			vertical-align: middle
+			margin-right: 12px
+	&__search
+		height: 40px
+		width: 100%
+		box-sizing: border-box
+		padding-left: 69px
+		position: relative
+		.search__button
+			display: block
+			border: 0
+			outline: none
+			width: 18px
+			height: 18px
+			background: transparent url(../images/search.png) no-repeat
+			position: absolute
+			top: 10px
+			left: 28px
+		input
+			border: 0
+			outline: 0
+			height: 100%
+			width: 100%
+			line-height: 40px
+	.tabs
+		margin-top: 3px
+		&__caption
+			display: table
+			width: 100%
+			border-top: 1px solid #d6d6d6
+			border-bottom: 1px solid #d6d6d6
+			text-transform: uppercase
+			li
+				display: block
+				box-sizing: border-box
+				float: left
+				padding: 14px 0 13px 0
+				width: 33.3%
+				text-align: center
+				cursor: pointer
+				font-family: $roboto-M
+				font-size: 13px
+				color: #9a9a9a
+				position: relative
+				&:before
+					content: ''
+					position: absolute
+					bottom: -1px
+					left: 0
+					width: 100%
+					height: 3px
+					background: $orange
+					visibility: hidden
+					opacity: 0
+				&.active
+					color: $orange
+					&:before
+						visibility: visible
+						opacity: 1
+		&__content
+			display: none
+			padding-top: 22px
+			&.active
+				display: block
+			ul
+				li
+					padding: 13px 55px 14px 25px
+					//+transition(0.3s ease-in-out)
+					position: relative
+					a
+						color: inherit
+					&:hover
+						a
+							color: $orange
+						.sidebar__buttons
+							visibility: visible
+							opacity: 1
+					&.close
+						background: #f5f5f5
+						a
+							color: inherit
+							cursor: default
+						.sidebar__buttons
+							display: none
+					.short-name
+						display: none
+	&__buttons
+		display: table
+		position: absolute
+		right: 10px
+		top: 10px
+		visibility: hidden
+		opacity: 0
+		//+transition(0.3s ease-in-out)
+		.btn
+			border: 0
+			outline: 0
+			display: block
+			width: 15px
+			height: 15px
+			float: right
+			margin-left: 5px
+			margin-right: 2px
+			cursor: pointer
+			&--favorite
+				background: url(../images/star.png) no-repeat
+			&--close
+				background: url(../images/delete.png) no-repeat
+				background-position: center 3px
+			&--trash
+				background: url(../images/trash.png) no-repeat
+				background-position: center 1px
+	&__toggle-button
+		width: 100%
+		border: 0
+		outline: 0
+		position: absolute
+		bottom: 0
+		left: 0
+		height: 50px
+		cursor: pointer
+		background: #f5f5f5
+		border-top: 1px solid #d6d6d6
+		img
+			float: right
+			margin: 0 13px 
+	&--close
+		left: -266px
+		.sidebar
+			&__toggle-button
+				img
+					transform: rotate(180deg)
+					margin: 0 19px
+			&__logo
+				display: table
+				width: 100%
+				margin-left: 0
+				margin-bottom: 40px
+				img
+					float: right
+					margin-right: 16px
+					&:nth-child(2)
+						display: none
+			&__search
+				.search__button
+					left: inherit
+					right: 21px
+					cursor: pointer
+		.tabs
+			&__caption
+				display: none
+			&__content
+				border-top: 1px solid #d6d6d6
+				margin-top: 24px
+				ul
+					li
+						.short-name
+							display: inline-block
+							float: right
+							min-width: 27px
+							text-align: center
+							margin-right: -39px
+						&:hover
+							position: relative
+							&:after
+								content: ''
+								display: block
+								width: 3px
+								height: 100%
+								position: absolute
+								left: 265px
+								top: 0
+								background: #fb8c00
+							.sidebar__buttons
+								visibility: hidden
+								opacity: 0
+						&.close
+							&:hover
+								&:after
+									display: none	

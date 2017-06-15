@@ -1,0 +1,30 @@
+@import 'base/reset'
+@import 'base/mixins'
+@import 'base/fonts'
+@import 'base/variables'
+@import 'layout/grid'
+
+body
+	background: $white
+	font-family: $roboto-R
+	font-size: 14px
+	color: $text-color
+	position: relative
+	width: 100%
+	//overflow-x: hidden
+html, body
+	height: 100%
+.wrapper
+	min-height: 100%
+	height: auto !important
+	height: 100%
+main
+	display: block
+	padding-bottom: $footer-height
+footer
+	margin-top: -$footer-height
+	box-sizing: border-box
+a, input[type="submit"]
+	//+transition(0.3s ease-in-out)
+
+@import 'layout/sidebar'
